@@ -110,24 +110,28 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 .header-entrance-h1{
     text-align: center;
     color: #fff;
 }
-.header-entrance-name {
+.header-entrance-name{
     display: block;
     text-transform: uppercase;
     font-size: 2.5rem;
     font-weight: 600;
     letter-spacing: 2px;
     text-shadow: 0px 0px 2px #333;
+    animation: animation-header-name 1.2s linear;
+    position: relative;
 }
-.header-entrance-prof {
+.header-entrance-prof{
     display: block;
     font-size: 1.8rem;
     color: #1b6ae8;
     font-weight: 400;
+    animation: animation-header-prof 1.2s linear;
 }
 .small{
     font-weight: 300;
@@ -381,8 +385,7 @@ body{
     .nav-links:last-child{
         padding: 20px 0;
     }
-    .nav-links:hover,
-    .nav-links:focus{
+    .nav-links:hover{
         background-color: #1b6ae8;
         color: #fff;
     }
@@ -407,4 +410,32 @@ body{
     }
     
 }
-    
+
+@keyframes animation-header-name{
+    0%{
+        left: -250px;
+        opacity: 0;
+    }
+    70%{
+        opacity: 0.3;
+    }
+    100%{
+        left: 0;
+        opacity: 1;
+    }
+}
+@keyframes animation-header-prof{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    60%{
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
