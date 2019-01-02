@@ -12,6 +12,9 @@ hamburger.addEventListener('click', function(){
 
 for(let el of links){
     el.addEventListener('click', function(){
+	hamburgerLine[0].classList.remove('hamburger-line-one-active');
+	hamburgerLine[1].classList.remove('hamburger-line-two-active');
+    	hamburgerLine[2].classList.remove('hamburger-line-three-active');
         nav.classList.remove('nav-list-active');
     });
 }
